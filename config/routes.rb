@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :articles, param: :slug
       resources :reviews, only: [:create, :destroy]
+      resources :authors
     end
   end
 
