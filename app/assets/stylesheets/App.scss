@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+$font-serif: 'Merriweather', serif;
+$font-sans: 'Lato', sans-serif;
+$clr1: #f4f4f4;
+$clr2: #192e42;
+
+body {
+  background-color: $clr1;
+}
+
+.main {
+  color: $clr2;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+h1 {
+  font-family: $font-serif;
+  font-size: 48px;
+}

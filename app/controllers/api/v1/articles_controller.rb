@@ -1,25 +1,25 @@
 module Api
   module V1
-    class AirlinesController < ActionController
+    class ArticlesController < ApplicationController
       def index
         articles = Article.all
 
-        render json: AirlineSerializer.new(airlines, options).serialized_json
+        render json: ArticleSerializer.new(articles, options).serialized_json
       end
 
       def show
         article = Article.find_by(slug: params[:slug])
 
-        rednder json: ArticleSerializer.new(article, options).serialized_json
+        render json: ArticleSerializer.new(articles, options).serialized_json
       end
 
       def create
         article = Article.new(airline_params)
 
         if airline.save
-          rende json: ArticleSerializer.new(article).serialized_json
+          render json: ArticleSerializer.new(articles).serialized_json
         else
-          render json: {error.article.error.messages}, status: 422
+          render json: { error: article.error.messages }, status: 422
         end
       end
 
@@ -27,9 +27,9 @@ module Api
         article = Article.find_by(slug: params[:slug])
 
         if airline.update(airline_params)
-          rende json: ArticleSerializer.new(article, options).serialized_json
+          render json: ArticleSerializer.new(articles, options).serialized_json
         else
-          render json: {error.article.error.messages}, status: 422
+          render json: { error: article.error.messages }, status: 422
         end
       end
 
@@ -39,7 +39,7 @@ module Api
         if airline.destroy
           head :no_content
         else
-          render json: {error.article.error.messages}, status: 422
+          render json: { error: article.error.messages }, status: 422
         end
       end
 
@@ -50,7 +50,7 @@ module Api
       end
 
       def options
-        @options ||= { include: %i[comments]}
+        @options ||= { include: %i[comments] }
       end
     end
   end
