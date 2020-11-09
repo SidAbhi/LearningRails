@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <Router>
-      <Route exact path="/" component={App} />
+      <Route path="/" component={App} />
     </Router>,
     document.body.appendChild(document.createElement('div')),
   )

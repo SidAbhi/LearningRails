@@ -8,6 +8,8 @@ class Article < ApplicationRecord
   end
 
   def avg_score
+    return 0 unless comments.count.positive
+    
     comments.average(:score).round(2).to_f
   end
 end

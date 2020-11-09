@@ -46,7 +46,7 @@ module Api
       private
 
       def article_params
-        params.require(:article).permit(:title, :body)
+        params.require(:article).permit(:title, :body, :author, :img_url_front, :img_url_back, :img_url_middle, :color)
       end
 
       def options
