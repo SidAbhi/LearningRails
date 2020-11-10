@@ -10,6 +10,13 @@ body {
   font-family: $font-serif;
   font-size: 16px;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  z-index: 20;
 }
 
 li {
@@ -28,7 +35,9 @@ h2 {
   color: $clr2;
   width: 100%;
   display: grid;
+  grid-template-columns: 1fr;
   justify-content: center;
+  margin:0;
 }
 
 .article-lists {
@@ -41,7 +50,14 @@ h2 {
     "b c";
 }
 
+.article-grid-container {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+
 .article-titlecard {
+  box-sizing: border-box;
   width: 80%;
   min-height: 20vh;
   background-color: $clr1;
@@ -49,6 +65,11 @@ h2 {
   bottom: 5%;
   border-radius: 20px;
   justify-self: center;
+  padding: 3%;
+}
+
+.main-banner {
+  width: 100%;
 }
 
 .side-preview {

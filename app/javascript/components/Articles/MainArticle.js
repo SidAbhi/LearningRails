@@ -3,13 +3,12 @@ import {ParallaxBanner} from 'react-scroll-parallax'
 import {BrowserRouter as Router, Link} from 'react-router-dom'
 import ParallaxCache from '../ParallaxCache'
 
-const ArticlePreview = (props) => {
+const MainArticle = (props) => {
   const lax = () => props.attributes.img_url_back === null ? Math.random() : 0.2;
-
-  console.log(props.attributes)
+  console.log(props.attributes.title)
 
   return (
-    <div className="card">
+    <div className="main-banner">
       <ParallaxCache />
       <ParallaxBanner
         layers={[
@@ -27,11 +26,10 @@ const ArticlePreview = (props) => {
           },
         ]}
         style={{
-          height: "50vh",
-          width: "95%",
+          height: "80vh",
+          width: "100%",
           backgroundColor: props.attributes.color,
           marginBottom: "5%",
-          borderRadius: "24px",
           display: "grid",
         }}
       >
@@ -46,4 +44,4 @@ const ArticlePreview = (props) => {
   );
 };
 
-export default ArticlePreview;
+export default MainArticle;
