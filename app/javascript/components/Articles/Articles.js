@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import ArticlePreview from './ArticlePreview'
+import SideHighlights from './SideHighlights'
 
 const Articles = () => {
 
@@ -15,9 +16,16 @@ const Articles = () => {
     .catch( resp => console.log(resp))
   }, [articles.length])
 
-  const list = articles.map( item => {
+  const list = articles.map(item => {
     return(
       <ArticlePreview key={item.attributes.slug} attributes={item.attributes}/>
+    )
+  })
+
+  const side = articles.map(item => {
+    console.log(item.attributes)
+    return(
+      <SideHighlights key={`${item.attributes.slug}-side`} attribute={item.attributes}/>
     )
   })
 
@@ -25,6 +33,9 @@ const Articles = () => {
     <div className="main">
       <div className="article-lists">
         {list}
+        <div className="side-preview">
+          {side}
+        </div>
       </div>
     </div>
   )

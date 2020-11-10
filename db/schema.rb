@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_11_08_050750) do
     t.string "img_url_back"
     t.string "color"
     t.string "slug"
+    t.boolean "main_highlight"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

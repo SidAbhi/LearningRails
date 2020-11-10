@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Link} from 'react-router-dom'
 import ParallaxCache from '../ParallaxCache'
 
 const ArticlePreview = (props) => {
+  const lax = () => props.img_url_back === null ? Math.random() : 0.2;
+
   return (
     <div className="card">
       <ParallaxCache />
@@ -20,20 +22,24 @@ const ArticlePreview = (props) => {
           },
           {
             image: props.attributes.img_url_front,
-            amount: 0.2,
+            amount: lax(),
           },
         ]}
         style={{
           height: "70vh",
-          width: "90%",
+          width: "95%",
           backgroundColor: "#192e42",
           marginBottom: "5%",
-          borderRadius: "14px"
+          borderRadius: "24px",
+          display: "grid",
         }}
       >
-        <div className ="article-title">{props.attributes.title}</div>
-        <div className ="article-body"></div>
-        <div className ="article-score"></div>
+        <div className ="article-titlecard">
+          <div className ="article-title">
+            {props.attributes.title}
+          </div>
+          <div className ="article-score"></div>
+        </div>
       </ParallaxBanner>
     </div>
   );

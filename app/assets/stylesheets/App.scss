@@ -32,9 +32,28 @@ h2 {
 }
 
 .article-lists {
+  width: 80vw;
   display: grid;
-  width: 60vw;
-  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  grid-template-columns: 4fr 1fr;
+  grid-template-areas: 
+    "a a"
+    "b c";
+}
+
+.article-titlecard {
+  width: 80%;
+  min-height: 20vh;
+  background-color: $clr1;
+  position: absolute;
+  bottom: 5%;
+  border-radius: 20px;
+  justify-self: center;
+}
+
+.side-preview {
+  display: grid;
+  grid-area: "c";
 }
 
 @media (max-width: 770px) {

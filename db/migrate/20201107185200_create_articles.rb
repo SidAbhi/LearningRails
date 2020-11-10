@@ -9,6 +9,7 @@ class CreateArticles < ActiveRecord::Migration[6.0]
       t.string :img_url_back
       t.string :color
       t.string :slug
+      t.boolean :main_highlight
 
       t.timestamps
     end

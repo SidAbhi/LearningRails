@@ -14,6 +14,8 @@ articles = Article.create([
     img_url_front: "/images/Exhaustcloud-8.png",
     img_url_middle: "/images/Rocket-8.png",
     img_url_back: "/images/Stars-8.png",
+    color: "#192e42",
+    main_highlight: true,
   },
   {
     title: "Dangers of Social Media",
@@ -23,6 +25,9 @@ articles = Article.create([
     
     That is because we still as a society have not come to grips with the truth: teens are different. In the past, even though parents could often control what their kids played or watched, because teens were still developing their brains and behavior, their wants and needs were more easily understood than they are today. While there are exceptions, today's teens are growing up in an increasingly difficult world to navigate through.",
     author: "AI writer",
+    img_url_front: "/images/DoSM.jpg",
+    color: "#BEE3DB",
+    main_highlight: false,
   },
   {
     title: "Path to Relationship Happiness",
@@ -42,6 +47,8 @@ articles = Article.create([
     
     Schoppe-Sullivan and her team plan to conduct additional research exploring how people who had good social relationships, such as a strong, supportive family, felt more comfortable with intimacy and establishing new relationships, which may explain their higher relationship quality.",
     author: "AI writer",
+    color: "#555B6E",
+    main_highlight: false,
   },
 ])
 
